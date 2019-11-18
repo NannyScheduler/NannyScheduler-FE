@@ -1,13 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route } from 'react-router-dom';
+import Header from "./components/Header.js";
+import NannyList from "./components/NannyList";
+import WelcomePage from "./components/WelcomePage";
 
-function App() {
+
+
+export default function App() {
+  
   return (
-    <div className="App">
-      <h1>Nanny Scheduler</h1>
-    </div>
+    <main>
+      <Header />
+      <Route exact path="/" component={WelcomePage} />
+      <Route path="/nannies" component={NannyList} />
+    </main>
   );
 }
-
-export default App;
