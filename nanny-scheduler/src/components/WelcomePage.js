@@ -9,6 +9,9 @@ export default function WelcomePage() {
         <Link to="/nannies">
           View and Search Nanny List <br/>
         </Link>
+        <Link to="/nanny-signup">
+          Nanny Signup
+        </Link>
       </header>
     </section>
   );
