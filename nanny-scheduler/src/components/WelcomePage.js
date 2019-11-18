@@ -10,7 +10,10 @@ export default function WelcomePage() {
           View and Search Nanny List <br/>
         </Link>
         <Link to="/nanny-signup">
-          Nanny Signup
+          Nanny Signup <br/>
+        </Link>
+        <Link to="/parent-signup">
+          Parent Signup
         </Link>
       </header>
     </section>
