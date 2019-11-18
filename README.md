@@ -13,3 +13,5 @@ React-Scripts
 Styled-Components
 UUID
 Yup
+
+Jasyn Marais - WEBEU4 - 18 November 2019
