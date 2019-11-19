@@ -6,6 +6,7 @@ import WelcomePage from "./components/WelcomePage";
 import NannyForm from './components/NannyForm';
 import ParentForm from './components/ParentForm';
 import About from './components/About';
+import SignUp from './components/SignUp';
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/nannies" component={NannyList} />
       <Route path="/nanny-signup" component={NannyForm} />
       <Route path="/parent-signup" component={ParentForm} />
+      <Route path="/signup" component={SignUp} />
     </main>
   );
 }

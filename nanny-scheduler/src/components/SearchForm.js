@@ -15,7 +15,7 @@ export default function SearchForm(props) {
                 type="text"
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                placeholder="Search for a Character"
+                placeholder="Search for a Nanny"
               />
             </form>
           </section>

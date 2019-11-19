@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-export default function WelcomePage() {
+export default function AboutPage() {
   return (
     <section className="about-page">
       <header>
@@ -12,13 +12,8 @@ export default function WelcomePage() {
         <Link to="/nannies">
           Search Nanny List <br/>
         </Link>
-        <Link to="/nanny-signup">
-          Nanny Signup <br/>
-        </Link>
-        <Link to="/parent-signup">
-          Parent Signup
-        </Link>
       </header>
+
       <p>
         We understand how hard it is to find a good nanny.
       </p>
