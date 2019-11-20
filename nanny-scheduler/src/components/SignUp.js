@@ -7,10 +7,10 @@ export default function Signup() {
       <header>
         <h1>Childcare that fits into your schedule</h1>
         <Link to="/nanny-signup">
-          Nanny Signup <br/>
+          I'm a Nanny <br/>
         </Link>
         <Link to="/parent-signup">
-          Parent Signup
+          I'm a Parent
         </Link>
       </header>
     </section>
