@@ -6,6 +6,9 @@ export default function Signup() {
     <section className="signup">
       <header>
         <h1>Childcare that fits into your schedule</h1>
+        <Link to="/">
+          Home <br/>
+        </Link>
         <Link to="/nanny-signup">
           I'm a Nanny <br/>
         </Link>

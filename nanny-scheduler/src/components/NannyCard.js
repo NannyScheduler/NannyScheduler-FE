@@ -2,21 +2,16 @@ import React from "react";
 
 export default function NannyCard(props) {
   const {
-    name,
-    gender,
-    image,
-    species,
-    status,
-    type
+    first_name,
+    last_name,
+    hourly_rate
   } = props.data;
   return (
     <div className="nanny">
-      <div>Name: {name}</div>
-      <div>Gender: {gender}</div>
-      <div>Species: {species}</div>
-      {type ? <div>Type: {type}</div> : null }
-      {status !== "unknown" ? <div>Status: {status}</div> : null }
-      <img src={image} alt={type ? type : name}/>
+      
+      <div>First Name: {first_name}</div>
+      <div>Last Name: {last_name}</div>
+      <div>Hourly Rate: {hourly_rate}</div>
     </div>
   );
 }

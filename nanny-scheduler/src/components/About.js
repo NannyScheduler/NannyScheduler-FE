@@ -10,7 +10,7 @@ export default function AboutPage() {
           Home <br/>
         </Link>
         <Link to="/nannies">
-          Search Nanny List <br/>
+          Nanny List <br/>
         </Link>
       </header>
 
