@@ -7,14 +7,12 @@ import SearchForm from './SearchForm';
 function NannyList(props) {
   // TODO: Add useState to track data from useEffect
   const [nannies, setNannies] = useState([]);
-  const [search, setSearch] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
-    axios.get('https://rickandmortyapi.com/api/character/')
+    axios.get('https://nanny-scheduler1.herokuapp.com/api/nanny/')
 			.then(res => {
-				setNannies(res.data.results);
+				setNannies(res.data);
 			})
 			.catch(error => console.error(error))
 		return () => {
@@ -23,35 +21,12 @@ function NannyList(props) {
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
 
-  useEffect(() => {
-		if (search !== '') {
-			console.log("Searching");
-			let _searchResults = nannies.filter(char => (
-				char.name.search(search) !== -1 ||
-				char.gender.search(search) !== -1 ||
-				char.species.search(search) !== -1 ||
-				char.type.search(search) !== -1 ||
-				char.status.search(search) !== -1
-			));
-			setSearchResults(_searchResults);
-		} else {
-			setSearch('');
-			setSearchResults([]);
-		}
-		return () => {
-		};
-	}, [search])
-
-  const nanList = (searchResults.length > 0 ? searchResults : nannies);
+  const nanList = (nannies);
   return (
     <section className="nanny-list">
-      <SearchForm
-				search={search}
-				setSearch={setSearch}
-		/>
       <h2>Nanny List</h2>
       {
-        nanList.map(nan => <NannyCard key={nan.id} data={nan} />)
+        nanList.map(nannies => <NannyCard key={nannies.id} data={nannies} />)
       }
     </section>
   );
