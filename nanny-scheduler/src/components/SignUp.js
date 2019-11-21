@@ -5,17 +5,16 @@ export default function Signup() {
   return (
     <section className="signup">
       <header>
-        <h1>Childcare that fits into your schedule</h1>
         <Link to="/">
           Home <br/>
         </Link>
-        <Link to="/nanny-signup">
+      </header>
+      <Link to="/nanny-signup">
           I'm a Nanny <br/>
         </Link>
         <Link to="/parent-signup">
           I'm a Parent
         </Link>
-      </header>
     </section>
   );
 }

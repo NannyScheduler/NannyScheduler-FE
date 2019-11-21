@@ -3,10 +3,27 @@ import ReactDOM from "react-dom";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import styled from 'styled-components';
+
+const Button = styled.button`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+const StyledSection = styled.section`
+  margin: 5px;
+  padding: 5%;
+  text-align: center;
+`;
 
 function ParentForm({ values, errors, touched, isSubmitting }) {
   return (
     <Form>
+      <StyledSection>
       <h2>
               Sign Up to be a Nanny
           </h2>
@@ -42,9 +59,10 @@ function ParentForm({ values, errors, touched, isSubmitting }) {
         {touched.phone && errors.phone && <p>{errors.phone}</p>}
         <Field type='text' name='phone' placeholder='Phone Number' />
       </div>
-      <button disabled={isSubmitting} type='submit'>
+      <Button disabled={isSubmitting} type='submit'>
         Submit
-      </button>
+      </Button>
+      </StyledSection>
     </Form>
   );
 }
