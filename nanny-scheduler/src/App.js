@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from "./components/Header.js";
+import NannyList from "./components/NannyList";
+import WelcomePage from "./components/WelcomePage";
+import NannyForm from './components/NannyForm';
+import ParentForm from './components/ParentForm';
+import About from './components/About';
+import SignUp from './components/SignUp';
 
-function App() {
+
+
+export default function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header />
+      <Route exact path="/" component={WelcomePage} />
+      <Route path="/about" component={About} />
+      <Route path="/nannies" component={NannyList} />
+      <Route path="/nanny-signup" component={NannyForm} />
+      <Route path="/parent-signup" component={ParentForm} />
+      <Route path="/signup" component={SignUp} />
+    </main>
   );
 }
-
-export default App;
