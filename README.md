@@ -3,6 +3,8 @@ Nanny Scheduler Frontend
 
 Jasyn Marais - WEBEU4 - 18 - 22 November 2019
 
+Deployment:
+
 **Dependencies Installed:**
 
 - Axios
